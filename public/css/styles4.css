@@ -1,0 +1,165 @@
+body {
+  color: #40514E;
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+h2 {
+  color: #D8BFD8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #008080;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+p {
+  text-align: justify;
+  line-height: 2.5;
+  margin-top: 0;
+}
+
+hr {
+  border: dotted #F08080 8px;
+  border-bottom: none;
+  width: 5%;
+  margin: 100px auto;
+}
+
+a{
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EAF6F6;
+}
+
+.skill-row {
+  width: 70%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.intro {
+  width: 30%;
+  margin: auto;
+}
+
+.code-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.chilli-img {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+
+@media (max-width: 1079px) and (min-width: 846px) {
+  .code-img {
+    width: 32%;
+    float: left;
+    margin-right: 30px;
+  }
+
+  .chilli-img {
+    width: 32%;
+    float: right;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 846px) and (min-width: 719px) {
+  .code-img {
+    width: 37%;
+    float: left;
+    margin-right: 30px;
+  }
+
+  .chilli-img {
+    width: 37%;
+    float: right;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 719px) and (min-width: 499px) {
+  .code-img {
+    width: 50%;
+    float: none;
+    margin-right: 30px;
+  }
+
+  .chilli-img {
+    width: 50%;
+    float: none;
+    margin-left: 30px;
+  }
+
+  .skill-row {
+    width: 80%;
+    margin: 100px auto 100px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 385px) {
+  .code-img {
+    height: 200px;
+    width: 70%;
+    float: none;
+    margin-right: 30px;
+  }
+
+  .chilli-img {
+    height: 200px;
+    width: 70%;
+    float: none;
+    margin-left: 30px;
+  }
+
+  .skill-row {
+    width: 85%;
+    margin: 100px auto 100px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 385px) and (min-width: 200px) {
+  .code-img {
+    height: 220px;
+    width: 80%;
+    float: none;
+    margin-right: 30px;
+  }
+
+  .chilli-img {
+    height: 220px;
+    width: 80%;
+    float: none;
+    margin-left: 30px;
+  }
+
+  .skill-row {
+    width: 90%;
+    margin: 100px auto 100px auto;
+    text-align: center;
+  }
+}

@@ -1,0 +1,74 @@
+body{
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 15px;
+}
+form{
+  width: 40%;
+  border: 5px solid #f1f1f1;
+}
+input[type=text], input[type=password]{
+  align: center;
+  width: 60%;
+  padding: 16px 8px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+.heading{
+  font-family: Didot, serif;
+  color: #FFF8DC;
+  background-color: #008080;
+  padding: 25px;
+}
+.frm{
+  padding: 50px 50px 50px;
+}
+.button{
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 22px;
+  padding: 5px;
+  text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.lbl{
+clear: left;
+}
+.h1{
+  color : #DC143C;
+  text-align: center;
+  fone-size: 18;
+}
+.button:hover{
+  color: rgb(50, 212, 235);
+  text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+  background: rgb(190, 146, 200);
+  background: -moz-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: -o-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: -ms-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: linear-gradient(0deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+  opacity: 0.8;
+}
+.formcontainer{
+  text-align: center;
+  margin: 24px 50px 12px;
+}
+.container{
+  padding: 16px 0;
+  text-align: left;
+}
+.rem{
+  padding-right: 50px;
+}
+a:hover{
+  color: #FF00FF;
+}

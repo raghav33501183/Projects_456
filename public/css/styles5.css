@@ -1,0 +1,194 @@
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("/images/qna.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  text-align: justify;
+  width: 60%;
+  padding: 0;
+  font-size: 20px;
+}
+
+
+.qn {
+  font-family: OCR A Std, monospace;
+}
+
+.ans {
+  font-family: Apple Chancery, cursive;
+}
+
+
+
+.lbl {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.qa {
+  margin-left: 180px;
+  height: 30px;
+  width: 100%;
+}
+
+.text-one {
+  margin-right: 10px;
+  width: 15%;
+  height: 25px;
+}
+
+.text-two {
+  margin-right: 10px;
+  width: 25%;
+  height: 30px;
+}
+
+.button{
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 3px;
+  text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.button:hover{
+  color: rgb(50, 212, 235);
+  text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+  background: rgb(190, 146, 200);
+  background: -moz-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: -o-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: -ms-linear-gradient(90deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  background: linear-gradient(0deg, rgb(190, 146, 200) 100%, rgb(202, 1, 2) 100%);
+  -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) and (min-width: 100px) {
+  p {
+    width: 80%;
+  }
+  .qa {
+    margin-left: 80px;
+  }
+  .bg-image {
+    background-size: 900px 300px;
+  }
+  .text-one {
+    width: 20%;
+
+  }
+  .text-two {
+    width: 20%;
+
+  }
+}
+
+
+@media (max-width: 769px) and (min-width: 600px) {
+  p {
+    width: 90%;
+  }
+  .qa {
+    margin-left: 20px;
+  }
+  .bg-image {
+    background-size: 700px 230px;
+  }
+  .text-one {
+    width: 20%;
+
+  }
+  .text-two {
+    width: 20%;
+
+  }
+}
+
+@media (max-width: 600px) and (min-width: 467px) {
+  p {
+    width: 90%;
+  }
+  .qa {
+    margin-left: 20px;
+  }
+  .bg-image {
+    background-size: 550px 190px;
+  }
+  .button {
+    display: block;
+    margin-left: 30px;
+  }
+  .text-one {
+    width: 25%;
+
+  }
+  .text-two {
+    width: 25%;
+
+  }
+}
+
+@media (max-width: 467px) and (min-width: 382px) {
+  p {
+    width: 90%;
+  }
+  .qa {
+    margin-left: 20px;
+  }
+  .bg-image {
+    background-size: 450px 170px;
+  }
+  .button {
+    display: block;
+    margin-left: 30px;
+  }
+  .text-one {
+    width: 25%;
+
+  }
+  .text-two {
+    width: 25%;
+
+  }
+}
+
+@media (max-width: 382px) and (min-width: 200px) {
+  p {
+    width: 90%;
+  }
+  .qa {
+    margin-left: 10px;
+  }
+  .bg-image {
+    background-size: 300px 170px;
+  }
+  .button {
+    display: block;
+    margin-left: 30px;
+  }
+  .text-one {
+    width: 25%;
+
+  }
+  .text-two {
+    width: 25%;
+
+  }
+}

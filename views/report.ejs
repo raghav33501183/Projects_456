@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>REGISTER</title>
+    <link rel="stylesheet" href="css/styles1.css">
+  </head>
+  <body>
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+
+
+      <div style="margin-top: 50px;" class="heading">
+        <h1><em>PETCARE</em></h1>
+      </div>
+      <form style="height: 680px" class="frm" action="/" enctype="multipart/form-data" method="post">
+        <h1>REGISTER</h1>
+        <label for="uname"><strong>Animal type:-</strong></label><br>
+        <input type="text" placeholder="✉" name="one" required><br><br>
+        <label for="psw"><strong>Found near:-</strong></label><br>
+        <input type="text" placeholder="✉" name="two" required><br><br>
+        <label for="repsw"><strong>Contact No.:-</strong></label><br>
+        <input type="number" placeholder="✉" name="three" required><br><br>
+        <label for="repsw"><strong>Email ID:-</strong></label><br>
+        <input type="email" placeholder="✉" name="four" required><br><br>
+        <label for="repsw"><strong>Upload photo:-</strong></label>
+        <input type="file" name="file" value="">
+        <% if(vary == 'eee') { %>
+          <p>Raghav is a good boy!!!!!!!</p>
+        <% } %>
+        <input class="button" type="submit" value="REGISTER!">
+      </form>
+    </div>
+  </body>
+</html>

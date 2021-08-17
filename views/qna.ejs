@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>QNA</title>
+    <link rel="stylesheet" href="css/styles5.css">
+  </head>
+  <body>
+    <div class="bg-image"></div>
+    <div class="">
+      <div class="qa">
+        <% for (let i=0; i<newListItems.length; i++) { %>
+          <p class="qn">∅. <b><%= newListItems[i].question %> </b></p>
+          <% for (let j=0; j<newListItems[i].answer.length; j++) { %>
+            <p class="ans">⊁ <%= newListItems[i].answer[j].answer %> </p>
+          <% } %>
+          <form class="" action="/answer" method="post">
+            <label class="lbl" for=""><i>Ẫ.</i></label>
+            <input class="text-one" type="text" name="answer" value="" placeholder="Answer...">
+            <button class="button" type="submit" name="button" value="<%= newListItems[i]._id %>">Answer</button>
+          </form>
+          <br><br>
+        <% } %>
+        <br>
+        <br>
+        <form class="" action="/question" method="post">
+          <label class="lbl" for="">Q.</label>
+          <input class="text-two" type="text" name="question" value="" placeholder="Ask a question...">
+          <input class="button" type="submit" name="" value="A s k">
+          <br><br><br>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<%- include("header") -%>
+
+  <section class="white-section" id="pricing">
+    <div class="colored-section-2" id="contents">
+      <a href="petsold"><i>Pets Sold</i></a><br><br><br>
+      <a href="qna"><i>QNA Section</i></a><br><br><br>
+      <a href="blog"><i>Blog</i></a><br><br><br>
+      <a href="dog"><i>Dogs</i></a><br><br><br>
+      <a href="cow"><i>Cows</i></a><br><br><br>
+      <a href="cat"><i>Cats</i></a><br><br><br>
+      <a href="goat"><i>Goats</i></a><br><br><br>
+      <a href="#about"><i>About</i></a><br><br><br>
+      <a href="#footer"><i>Contact</i></a><br><br><br>
+    </div>
+    <div class="row" id="rowbar">
+      <% for (let i=0; i<newListItems.length; i++) { %>
+        <div class="pricing-column col-lg-3 col-md-6">
+          <div class="card">
+            <!-- <div class="card-header">
+              <h2><p><%=  newListItems[i].Animal  %></p></h2>
+            </div> -->
+            <div class="card-body">
+              <div class="item">
+                <img class="image-fluid" id="img" src="uploads/<%= newListItems[i].Image %>" alt="Profile Image" width=100% height="240">
+              </div>
+            </div>
+            <div class="card-footer">
+              <% if(vary == 'fff') { %>
+                <form action="/confirm" method="post">
+                  <button class="btn btn-block btn-info" type="submit" name="button" value="<%= newListItems[i]._id %>">ADOPT</button>
+                </form>
+              <% } else { %>
+                <form action="/confirm" method="post">
+                  <button class="btn btn-block btn-info" type="submit" name="button" value="<%= newListItems[i]._id %>">ADOPT</button>
+                </form>
+                <!-- <a href="login"><button class="btn btn-block btn-info" type="button" width="1000">ADOPT</button></a> -->
+              <% } %>
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+
+    </div>
+
+  </section>
+
+<%- include("footer") -%>

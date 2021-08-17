@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="css/styles1.css">
+  </head>
+  <body>
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+      <div class="heading">
+        <h1><em>PETCARE</em></h1>
+      </div>
+      <form class="frm" action="/user" method="post">
+        <h1>SIGN UP</h1>
+        <label for="uname"><strong>Username:-</strong></label><br>
+        <input type="text" placeholder="✉" name="uname" required><br><br><br>
+        <label for="psw"><strong>Password:-</strong></label><br>
+        <input type="password" placeholder="🔒" name="psw" required><br><br><br>
+        <label for="repsw"><strong>Re-enter Password:-</strong></label><br>
+        <input type="password" placeholder="🔒" name="repsw" required><br><br>
+        <% if(vary == 'ccc') { %>
+          <p class="warning">Username already taken!!</p>
+        <% } else if(vary == 'ddd') { %>
+          <p class="warning">Passwords don't match!!</p>
+        <% } %>
+        <input class="button" type="submit" value="SIGN UP!">
+      </form>
+    </div>
+
+
+
+  </body>
+</html>

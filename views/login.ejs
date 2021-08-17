@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="css/styles1.css">
+  </head>
+  <body>
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+      <div class="heading">
+        <h1><em>PETCARE</em></h1>
+      </div>
+      <form class="frm" action="/signin" method="post">
+        <h1>LOG IN</h1>
+        <label for="uname"><strong>Username:-</strong></label><br>
+        <input type="text" placeholder="✉" name="uname" required><br><br><br>
+        <label for="psw"><strong>Password:-</strong></label><br>
+        <input type="password" placeholder="🔒" name="psw" required><br>
+        <% if(vary == 'aaa') { %>
+          <p class="warning">Password doesn't match!!</p>
+        <% } else if(vary == 'bbb') { %>
+          <p class="warning">Username doesn't exist!!</p>
+        <% } %>
+        <input id="abcd" class="button" type="submit" value="LOG IN!">
+        <br><br>
+        <p>If new, then <a href="/signup">SIGN UP</a></p>
+        <p>To report an animal on our website, click here <a href="/report">REPORT</a></p>
+      </form>
+    </div>
+  </body>
+</html>
