@@ -1,9 +1,11 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 const path = require("path");
 const _ = require("lodash");
 
@@ -225,27 +227,30 @@ app.post("/", upload, function(req, res) {
 });
 
 app.post("/user", function(req, res){
-  const uname = req.body.uname;
-  const user1 = new User({
-    username: req.body.uname,
-    password: req.body.psw,
-  });
-  User.findOne({username: uname}, function(error, exist) {
-    if(error) {
-      console.log(error);
-    } else {
-      if (exist) {
-        res.render("signup", {title: 'POST user', vary:'ccc'});
+  bcrypt.hash(req.body.psw, saltRounds, function(err, hash) {
+    const uname = req.body.uname;
+    const user1 = new User({
+      username: req.body.uname,
+      password: hash,
+    });
+    User.findOne({username: uname}, function(error, exist) {
+      if(error) {
+        console.log(error);
       } else {
-        if(req.body.psw == req.body.repsw) {
-          user1.save();
-          res.redirect("/");
+        if (exist) {
+          res.render("signup", {title: 'POST user', vary:'ccc'});
         } else {
-          res.render("signup", {title: 'POST user', vary:'ddd'});
+          if(req.body.psw == req.body.repsw) {
+            user1.save();
+            res.redirect("/");
+          } else {
+            res.render("signup", {title: 'POST user', vary:'ddd'});
+          }
         }
       }
-    }
+    });
   });
+
 });
 
 app.post("/signin", function(req, res) {
@@ -256,22 +261,18 @@ app.post("/signin", function(req, res) {
         console.log(error);
       } else {
         if (exist) {
-          User.findOne({password: psw}, function(error, exist) {
-            if(error) {
-              console.log(error);
+          bcrypt.compare(psw, exist.password, function(err, result) {
+            if(result===true) {
+              Item.find({}, function(err, foundItems){
+                if(err) {
+                  console.log(error);
+                }
+                else {
+                  res.render("list", {title: 'POST signin', newListItems: foundItems, vary: 'fff'});
+                }
+              });
             } else {
-              if(exist) {
-                Item.find({}, function(err, foundItems){
-                  if(err) {
-                    console.log(error);
-                  }
-                  else {
-                    res.render("list", {title: 'POST signin', newListItems: foundItems, vary: 'fff'});
-                  }
-                });
-              } else {
-                res.render("login", {title: 'POST signin', vary:'aaa'});
-              }
+              res.render("login", {title: 'POST signin', vary:'aaa'});
             }
           });
         } else {
